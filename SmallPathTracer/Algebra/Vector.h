@@ -10,6 +10,10 @@ class Vector
 	double y;
 	double z;
 
+	double getX() { return x; }
+	double getY() { return y; }
+	double getZ() { return z; }
+
 public:
 
 	// Constructors

@@ -21,6 +21,16 @@ public:
 	Sphere(double, Vector, Vector, Vector, Reflection);
 	~Sphere();
 
+	Vector getPosition() { return position; }
+	double getRadius() { return radius; }
+
+	Vector getColor() { return color; }
+	Vector getEmission() { return emission; }
+
+	Reflection getReflection() { return reflection; }
+
+
+
 	double intersect(const Ray & ray) const;
 
 };
@@ -57,6 +67,7 @@ double Sphere::intersect(const Ray &ray) const {
 		return 0; // There is no interaction between ray and sphere
 	}
 	
+	// Solve t^2*d.d + 2*t*(o-p).d + (o-p).(o-p)-R^2 = 0
 	return (t = b - det) > epsilon ? t : ((t = b + det) > epsilon ? t : 0);
 
 

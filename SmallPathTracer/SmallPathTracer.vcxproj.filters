@@ -25,6 +25,9 @@
     <Filter Include="Header Files\Material">
       <UniqueIdentifier>{a4dddae8-0782-49cb-b24a-e25656430a67}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Engine">
+      <UniqueIdentifier>{6ae7f33a-745c-46aa-b459-9d0288b79516}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -46,6 +49,9 @@
     </ClInclude>
     <ClInclude Include="Material\Reflection.h">
       <Filter>Header Files\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\PathTracer.h">
+      <Filter>Header Files\Engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

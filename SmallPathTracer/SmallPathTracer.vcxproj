@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algebra\Vector.h" />
+    <ClInclude Include="Engine\PathTracer.h" />
     <ClInclude Include="Geometry\Sphere.h" />
     <ClInclude Include="Material\Reflection.h" />
     <ClInclude Include="Ray\Ray.h" />
