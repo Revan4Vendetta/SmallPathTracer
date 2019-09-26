@@ -14,6 +14,9 @@ public:
 	Ray(Vector, Vector);
 	~Ray();
 
+	Vector getOrigin() { return origin;}
+	Vector getDirection() { return direction;}
+
 private:
 
 };

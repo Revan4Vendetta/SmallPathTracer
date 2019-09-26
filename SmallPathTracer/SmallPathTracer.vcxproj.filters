@@ -19,6 +19,12 @@
     <Filter Include="Header Files\RayTracing">
       <UniqueIdentifier>{62eaacde-f55e-4eb8-8465-b1af17c82467}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Geometry">
+      <UniqueIdentifier>{03dcfc39-ebf5-4140-9f68-c1cbc1b76334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Material">
+      <UniqueIdentifier>{a4dddae8-0782-49cb-b24a-e25656430a67}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -34,6 +40,12 @@
     </ClInclude>
     <ClInclude Include="Ray\Ray.h">
       <Filter>Header Files\RayTracing</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\Sphere.h">
+      <Filter>Header Files\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Material\Reflection.h">
+      <Filter>Header Files\Material</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
