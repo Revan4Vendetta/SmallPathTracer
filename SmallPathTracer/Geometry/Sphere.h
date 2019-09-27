@@ -8,6 +8,9 @@
 
 class Sphere
 {
+
+public:
+
 	double radius;
 	Vector position;
 
@@ -16,20 +19,8 @@ class Sphere
 
 	Reflection reflection; // How this sphere reacts with light
 
-public:
-
 	Sphere(double, Vector, Vector, Vector, Reflection);
 	~Sphere();
-
-	Vector getPosition() { return position; }
-	double getRadius() { return radius; }
-
-	Vector getColor() { return color; }
-	Vector getEmission() { return emission; }
-
-	Reflection getReflection() { return reflection; }
-
-
 
 	double intersect(const Ray & ray) const;
 
@@ -55,11 +46,13 @@ double Sphere::intersect(const Ray &ray) const {
 
 	double epsilon = 1e-4; 
 
-	Vector rayOrigin = ray.getOrigin;
+	Vector rayOrigin = ray.origin;
+	Vector rayDirecion = ray.direction;
+
 	Vector op = position - rayOrigin;
 
 	double t;
-	double b = op.dot(ray.getDirection);
+	double b = op.dot(rayDirecion);
 	double det = b*b - op.dot(op) + radius*radius;
 
 	if (det < 0 )

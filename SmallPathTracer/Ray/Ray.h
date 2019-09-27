@@ -6,16 +6,15 @@
 class Ray
 {
 
+
+public:
+
 	Vector origin;
 	Vector direction;
 
-public:
 	Ray();
 	Ray(Vector, Vector);
 	~Ray();
-
-	Vector getOrigin() { return origin;}
-	Vector getDirection() { return direction;}
 
 private:
 

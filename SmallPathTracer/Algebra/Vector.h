@@ -6,19 +6,16 @@
 class Vector
 {
 
+public:
+
 	double x;
 	double y;
 	double z;
 
-	double getX() { return x; }
-	double getY() { return y; }
-	double getZ() { return z; }
-
-public:
-
 	// Constructors
 
 	Vector();
+	Vector(double);
 	Vector(double, double, double);
 	~Vector();
 
@@ -34,13 +31,13 @@ public:
 	Vector operator*(const Vector &vector) const {
 		return Vector(vector.x * x, vector.y * y, vector.z * z);
 	}
-	
-	Vector operator*(const double constant) const {
+
+	Vector operator*(double constant) const {
 		return Vector(constant * x, constant * y, constant * z);
 	}
 
 	Vector normalize() {
-		*this = *this * (1 / sqrt(x*x + y*y + z*z));
+		return *this = *this * (1 / sqrt(x*x + y*y + z*z));
 	}
 
 	double dot(const Vector &vector) const {
@@ -56,6 +53,11 @@ public:
 Vector::Vector()
 {
 	x = 0, y = 0, z = 0;
+}
+
+Vector::Vector(double _value)
+{
+	x = _value, y = _value, z = _value;
 }
 
 Vector::Vector(double _x, double _y, double _z) {
